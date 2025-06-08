@@ -170,6 +170,6 @@ STORAGES = {
 }
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
-        'food_db.views.CsrfExemptSessionAuthentication',
+        'food_db.authentication.CsrfExemptSessionAuthentication',
     ),
 }
