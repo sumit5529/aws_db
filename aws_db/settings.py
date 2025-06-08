@@ -168,3 +168,8 @@ STORAGES = {
         "BACKEND": 'storages.backends.s3boto3.S3Boto3Storage',
     },
 }
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'food_db.views.CsrfExemptSessionAuthentication',
+    ),
+}
