@@ -1,0 +1,30 @@
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Django-specific
+*.log
+local_settings.py
+db.sqlite3
+
+# Media and static
+/media
+/staticfiles
+/uploads
+
+# Python environment
+.env
+*.env
+venv/
+env/
+ENV/
+venv.bak/
+db_env/
+
+
+# VSCode config
+.vscode/
+
+# MacOS/Linux/Windows system files
+.DS_Store
+Thumbs.db
