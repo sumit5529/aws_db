@@ -173,3 +173,13 @@ REST_FRAMEWORK = {
         'food_db.authentication.CsrfExemptSessionAuthentication',
     ),
 }
+CELERY_BROKER_URL = os.environ["CELERY_BROKER_URL"] 
+from celery.schedules import crontab
+
+CELERY_BEAT_SCHEDULE = {
+    "process_food_task_every_minute": {
+        "task": "food_db.tasks.process_food_task_wrapper",
+        "schedule": crontab(minute="*/1"),  # every minute
+        "args": [],
+    },
+}
